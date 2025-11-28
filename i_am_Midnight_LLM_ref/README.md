@@ -185,4 +185,5 @@ ac67f69 Initial commit: Complete Midnight documentation suite
 
 **Last Updated**: November 28, 2025  
 **Maintained by**: AgenticDID Project Team  
-**Version**: Midnight v2.0.2, Ledger v3.0.2, Minokawa v0.18.0
+**Version**: Midnight v2.0.2, Ledger v3.0.2, Minokawa v0.18.0  
+**License**: Apache 2.0
