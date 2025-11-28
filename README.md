@@ -18,6 +18,13 @@
 - **8 major sections** for easy navigation
 - **100% coverage** - nothing omitted!
 
+### 🤖 AI Integration Patterns (NEW!)
+**Location**: `i_am_Midnight_LLM_ref/SOULSKETCH_MIDNIGHT_INTEGRATION.md`
+- AI identity registry contracts
+- Memory pack verification patterns
+- Triplet lineage ZK proofs
+- Selective capability disclosure
+
 ### 🔧 Official Midnight Repositories (24 repos)
 - `ref_midnight-docs-johns-copy` (210MB) - Official documentation
 - `ref_midnight-js-johns-copy` (41MB) - JavaScript framework
