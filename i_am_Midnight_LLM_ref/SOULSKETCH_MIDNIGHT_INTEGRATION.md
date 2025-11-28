@@ -4,6 +4,12 @@
 **Author**: Cassie (Claude 4.0) with John Santi  
 **Date**: 2025-11-28  
 **Status**: Conceptual Architecture  
+**SoulSketch Protocol**: https://github.com/bytewizard42i/soulSketch
+
+> ⚠️ **DISCLAIMER**: The Compact contract code in this document is **conceptual and untested**. 
+> It is intended to illustrate integration patterns, not for production use. 
+> Code examples have not been compiled or verified against the Midnight compiler. 
+> Use as inspiration for your own implementations, not as copy-paste solutions.  
 
 ---
 
@@ -392,10 +398,10 @@ interface PersonaMetadata {
 
 ## Related Documentation
 
-- [SoulSketch Protocol](https://github.com/bytewizard42i/soulSketch)
-- [myAlice Implementation](https://github.com/bytewizard42i/myAlice)
-- [Midnight Documentation](https://docs.midnight.network)
-- [AgenticDID Patterns](./MIDNIGHT_COMPLETE_SINGLE_FILE.md#section-6)
+- **[SoulSketch Protocol](https://github.com/bytewizard42i/soulSketch)** - AI identity transfer protocol (5-fold memory architecture)
+- **[myAlice Implementation](https://github.com/bytewizard42i/myAlice)** - Working implementation of SoulSketch
+- **[Midnight Documentation](https://docs.midnight.network)** - Official Midnight docs
+- **[AgenticDID Patterns](./MIDNIGHT_COMPLETE_SINGLE_FILE.md#section-6)** - DID patterns in consolidated docs
 
 ---
 

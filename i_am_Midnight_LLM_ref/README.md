@@ -1,8 +1,8 @@
 # Midnight Network - Complete Documentation (Single File)
 
-**Location**: `/home/js/utils_Midnight/Midnight_reference_repos/i_am_Midnight_LLM_ref`  
 **File**: `MIDNIGHT_COMPLETE_SINGLE_FILE.md`  
-**Purpose**: ALL Midnight documentation in one LLM-optimized file
+**Purpose**: ALL Midnight documentation in one LLM-optimized file  
+**Bonus**: `SOULSKETCH_MIDNIGHT_INTEGRATION.md` - AI identity patterns for Midnight
 
 ---
 
@@ -177,12 +177,12 @@ ac67f69 Initial commit: Complete Midnight documentation suite
 **How**: Single 812KB markdown file  
 **Why**: Optimized for LLM consumption  
 **Who**: AI assistants, developers, RAG systems  
-**Where**: `/home/js/utils_Midnight/Midnight_reference_repos/i_am_Midnight_LLM_ref/MIDNIGHT_COMPLETE_SINGLE_FILE.md`
+**Where**: This folder - `MIDNIGHT_COMPLETE_SINGLE_FILE.md`
 
 **Status**: ✅ Complete - Ready for use!
 
 ---
 
-**Last Updated**: October 28, 2025  
+**Last Updated**: November 28, 2025  
 **Maintained by**: AgenticDID Project Team  
 **Version**: Midnight v2.0.2, Ledger v3.0.2, Minokawa v0.18.0
