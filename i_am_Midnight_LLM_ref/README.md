@@ -183,7 +183,37 @@ ac67f69 Initial commit: Complete Midnight documentation suite
 
 ---
 
-**Last Updated**: November 28, 2025  
+---
+
+## 🔌 MCP Integration
+
+### Midnight MCP Server
+
+**Location**: `../ref_midnight-mcp-johns-copy/`  
+**Purpose**: Model Context Protocol server for AI-to-Midnight blockchain interaction  
+**Components**:
+- **Wallet Server** (`server.ts`) - Express.js REST API for wallet operations
+- **STDIO Server** (`stdio-server.ts`) - MCP-compliant proxy for AI agents
+
+**Features**:
+- Wallet management & balance queries
+- Transaction handling
+- Multi-agent support with isolated storage
+- Docker deployment ready
+
+**Quick MCP Config**:
+```json
+"midnight-mcp": {
+  "type": "stdio",
+  "name": "Midnight MCP",
+  "command": "bash",
+  "args": ["-c", "source ~/.nvm/nvm.sh && AGENT_ID=cassie nvm exec 22.15.1 node /home/js/utils_Midnight/Midnight_reference_repos/ref_midnight-mcp-johns-copy/dist/stdio-server.js"]
+}
+```
+
+---
+
+**Last Updated**: November 30, 2025  
 **Maintained by**: AgenticDID Project Team  
 **Version**: Midnight v2.0.2, Ledger v3.0.2, Minokawa v0.18.0  
 **License**: Apache 2.0
