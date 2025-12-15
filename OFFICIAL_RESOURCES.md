@@ -10,6 +10,11 @@
 ### Official YouTube Channel
 **URL**: https://www.youtube.com/@midnight.network
 
+### 📺 Official Tutorial Playlist
+**URL**: https://youtube.com/playlist?list=PL_ynGy6ajzU-olXFF6gOAY1VF2n8hxgX4
+
+> ⭐ **Recommended starting point for developers** - Official video tutorials from the Midnight team
+
 ### Unshielded Podcast (by Midnight)
 A podcast exploring the intersection of blockchain and data protection.
 
