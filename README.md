@@ -55,7 +55,7 @@
 - `ref_midnight-awesome-dapps-johns-copy` - Curated dApps
 - `ref_midnight-improvement-proposals-johns-copy` - MIPs
 - `ref_lfdt-project-proposals-johns-copy` (11MB) - Project proposals
-- **NEW**: `COMMUNITY_RESOURCES.md` - Curated list of community tools & templates
+- **NEW**: `OFFICIAL_RESOURCES.md` - Videos, Discord, Twitter, official links, ecosystem partners
 
 ---
 
