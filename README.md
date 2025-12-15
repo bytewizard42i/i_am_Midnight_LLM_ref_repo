@@ -15,6 +15,8 @@
 |------|---------|------|
 | **[LLM_QUICK_START.md](LLM_QUICK_START.md)** | Essential patterns - minimal context | ~200 lines |
 | **[MIDNIGHT_COMPLETE_SINGLE_FILE.md](i_am_Midnight_LLM_ref/MIDNIGHT_COMPLETE_SINGLE_FILE.md)** | ALL documentation consolidated | 33,422 lines |
+| **[COMMON_ERRORS.md](COMMON_ERRORS.md)** | Error messages → Solutions | Quick lookup |
+| **[KNOWN_ISSUES.md](KNOWN_ISSUES.md)** | Bugs, gotchas, workarounds | Critical |
 | **[GITHUB_REPOS.md](GITHUB_REPOS.md)** | All official midnightntwrk repos | 27+ repos |
 | **[OFFICIAL_RESOURCES.md](OFFICIAL_RESOURCES.md)** | Videos, Discord, community links | - |
 
