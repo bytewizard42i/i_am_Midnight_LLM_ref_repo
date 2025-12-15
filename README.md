@@ -55,6 +55,7 @@
 - `ref_midnight-awesome-dapps-johns-copy` - Curated dApps
 - `ref_midnight-improvement-proposals-johns-copy` - MIPs
 - `ref_lfdt-project-proposals-johns-copy` (11MB) - Project proposals
+- **NEW**: `COMMUNITY_RESOURCES.md` - Curated list of community tools & templates
 
 ---
 
@@ -216,16 +217,21 @@ This will pull latest changes from all reference repositories.
 
 ## 📝 Version Information
 
-**Midnight Versions**:
-- Midnight.js: v2.0.2+
-- Ledger: v3.0.2
+**Midnight Versions** (as of December 2025):
+- Midnight.js: v2.1.0
+- Ledger: v4.0.0
 - Compact Runtime: v0.9.0
-- Compactc: v0.26.0
+- Compactc: **0.25.0 recommended** (0.26.0 has known bugs)
 - Minokawa Language: v0.18.0
 - TestNet: Testnet_02
 
+**⚠️ Important Compiler Note**:
+- Use compiler version **0.25.0** (stable)
+- Avoid 0.26.0 (has bugs)
+- Pragma format: `pragma language_version >= 0.16 && <= 0.18;` (use RANGE, not exact)
+
 **Documentation**:
-- Last Updated: October 28, 2025
+- Last Updated: December 15, 2025
 - Total Files: 64 docs consolidated into 1
 - Total Lines: 33,422 lines
 - Total Size: ~500MB (repos) + 812KB (consolidated doc)
