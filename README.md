@@ -17,6 +17,7 @@
 | **[MIDNIGHT_COMPLETE_SINGLE_FILE.md](i_am_Midnight_LLM_ref/MIDNIGHT_COMPLETE_SINGLE_FILE.md)** | ALL documentation consolidated | 33,422 lines |
 | **[COMMON_ERRORS.md](COMMON_ERRORS.md)** | Error messages → Solutions | Quick lookup |
 | **[KNOWN_ISSUES.md](KNOWN_ISSUES.md)** | Bugs, gotchas, workarounds | Critical |
+| **[DOCKER_IMAGES.md](DOCKER_IMAGES.md)** | Official Docker Hub images | New |
 | **[GITHUB_REPOS.md](GITHUB_REPOS.md)** | All official midnightntwrk repos | 27+ repos |
 | **[OFFICIAL_RESOURCES.md](OFFICIAL_RESOURCES.md)** | Videos, Discord, community links | - |
 
@@ -70,7 +71,7 @@ curl -O https://raw.githubusercontent.com/bytewizard42i/i_am_Midnight_LLM_ref_re
 
 | Component | Recommended | Notes |
 |-----------|-------------|-------|
-| **Compiler (compactc)** | `0.26.0` | ✅ Latest stable |
+| **Compiler (compactc)** | `0.26.0` | ⚠️ FLAG FOR REVIEW - see KNOWN_ISSUES.md |
 | **Language Pragma** | `>= 0.16 && <= 0.18` | Use RANGE, not exact |
 | **Midnight.js** | v2.1.0 | Latest stable |
 | **Ledger** | v4.0.0 | Latest stable |
@@ -150,6 +151,9 @@ index.add(chunks)
 i_am_Midnight_LLM_ref_repo/
 ├── README.md                    # This file
 ├── LLM_QUICK_START.md          # Essential reference (small context)
+├── COMMON_ERRORS.md            # Error messages → Solutions
+├── KNOWN_ISSUES.md             # Bugs, gotchas, workarounds
+├── DOCKER_IMAGES.md            # Official Docker Hub images (NEW)
 ├── GITHUB_REPOS.md             # All official repo links
 ├── OFFICIAL_RESOURCES.md       # Videos, community, ecosystem
 │
