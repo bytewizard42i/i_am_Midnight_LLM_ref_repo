@@ -66,15 +66,21 @@ curl -O https://raw.githubusercontent.com/bytewizard42i/i_am_Midnight_LLM_ref_re
 
 ---
 
-## ⚠️ Critical Version Info
+## ⚠️ Critical Version Info (Updated Jan 2026)
 
 | Component | Recommended | Notes |
 |-----------|-------------|-------|
-| **Compiler (compactc)** | `0.25.0` | ⚠️ Avoid 0.26.0 (has bugs) |
+| **Compiler (compactc)** | `0.26.0` | ✅ Latest stable |
 | **Language Pragma** | `>= 0.16 && <= 0.18` | Use RANGE, not exact |
 | **Midnight.js** | v2.1.0 | Latest stable |
 | **Ledger** | v4.0.0 | Latest stable |
 | **Network** | Testnet_02 | Current testnet |
+| **Node.js** | v23.x | Recommended (22.x works) |
+
+### 🌟 MeshJS Starter Template (Recommended)
+- **Repo**: [MeshJS/midnight-starter-template](https://github.com/MeshJS/midnight-starter-template)
+- **Features**: React frontend, wallet widget, CLI tools, complete setup
+- **Live Demo**: https://counter.nebula.builders
 
 ---
 
