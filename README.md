@@ -1,11 +1,23 @@
-# 🌙 Midnight Network - Complete LLM Reference
+# ⚠️ DEPRECATED — This repo is no longer maintained
+
+> **As of February 2026**, this repository has been deprecated.
+>
+> **Use these instead:**
+> 1. **Midnight MCP Server**: [Olanetsoft/midnight-mcp](https://github.com/Olanetsoft/midnight-mcp) — the single source of truth for Midnight tooling
+> 2. **Official Docs**: [docs.midnight.network](https://docs.midnight.network) — the single source of truth for Midnight documentation
+>
+> The files below are preserved for historical reference only. They may contain outdated version info, patterns, or APIs. **Do not rely on them.**
+
+---
+
+# 🌙 Midnight Network - Complete LLM Reference (ARCHIVED)
 
 [![Midnight](https://img.shields.io/badge/Midnight-Network-purple)](https://midnight.network)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue)](LICENSE)
 [![Docs](https://img.shields.io/badge/Docs-midnight.network-green)](https://docs.midnight.network)
 
-**The definitive reference collection for Midnight Network development**  
-**Optimized for LLMs, AI assistants, RAG systems, and developers**
+**~~The definitive reference collection for Midnight Network development~~**  
+**This repo is archived. See deprecation notice above.**
 
 ---
 
