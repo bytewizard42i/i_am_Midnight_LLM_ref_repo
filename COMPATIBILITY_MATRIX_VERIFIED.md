@@ -1,189 +1,176 @@
 # Midnight Network Compatibility Matrix - Verified
 
 **Source:** https://docs.midnight.network/relnotes/support-matrix  
-**Last Updated:** November 16, 2025  
-**Testnet:** Testnet_02  
-**Verified By:** AgenticDID.io Team
+**Last Updated:** March 14, 2026  
+**Network:** Preprod  
+**Verified By:** AgenticDID.io Team (Penny on artpro WSL)
 
 ---
 
-## ✅ Official Compatibility Matrix
+## ✅ Official Compatibility Matrix (March 2026)
 
-| Component | Official Version | Our Version | Status | Notes |
-|-----------|-----------------|-------------|--------|-------|
-| **Network** | Testnet_02 | Testnet_02 | ✅ | Current testnet |
-| **Compactc** | 0.26.0 | 0.26.0 | ✅ | `/home/js/utils_Midnight/bin/compactc` |
-| **Language Version** | 0.18.0+ | 0.18.0 | ✅ | `pragma language_version >= 0.18.0` |
-| **Compact-runtime** | 0.9.0 | 0.9.0 | ✅ | npm package |
-| **Onchain-runtime** | 0.3.0 | N/A | ⏳ | Not used yet |
-| **Ledger** | 4.0.0 | 4.0.0 | ✅ | npm package |
-| **Proof Server** | 4.0.0 | 3.0.7 | ⚠️ | **CPU COMPATIBILITY ISSUE** |
-| **Midnight.js** | 2.1.0 | N/A | ⏳ | Not installed yet |
-| **Wallet SDK** | 5.0.0 | N/A | ⏳ | Phase 3 |
-
----
-
-## 🚨 **CRITICAL: Proof Server CPU Compatibility**
-
-### **Issue Discovered:**
-```
-Proof Server 4.0.0 requires AVX-512 CPU instructions
-- Introduced between v3.0.7 and v4.0.0
-- Causes SIGILL (exit 132) on older CPUs
-- Not documented in official requirements
-```
-
-### **Affected CPUs:**
-```
-❌ Intel Haswell (2013) - i7-4770, etc.
-❌ Intel Broadwell (2014)
-❌ Intel Skylake Client (2015)
-❌ AMD Zen/Zen+/Zen2/Zen3 (most Ryzen)
-
-✅ Intel Skylake-X (2017+)
-✅ Intel 10th gen+ (2019+)
-✅ AMD Zen 4 (Ryzen 7000, 2022+)
-✅ Cloud VMs (GCP, AWS, Azure)
-```
-
-### **Workaround:**
-```
-Local Development:
-  image: midnightnetwork/proof-server:3.0.7
-  - Works on Haswell and newer
-  - Fully compatible with Testnet_02
-  - ZK proofs are valid
-
-Production/Cloud:
-  image: midnightnetwork/proof-server:4.0.0
-  - 20-30% faster
-  - Requires modern CPU
-  - Recommended for deployment
-```
-
-### **Version Compatibility Test Results:**
-
-| Version | CPU Required | Haswell | Status | Date Tested |
-|---------|--------------|---------|--------|-------------|
-| 3.0.7 | AVX2 | ✅ Works | Stable | Nov 16, 2025 |
-| 4.0.0 | AVX-512 | ❌ SIGILL | Crashes | Nov 16, 2025 |
+| Component | Latest Stable | Our Version | Status | Notes |
+|-----------|--------------|-------------|--------|-------|
+| **Network** | Preprod | Preprod | ✅ | Current network (not "Testnet_02") |
+| **Compactc** | 0.29.0 | 0.29.0 | ✅ | Language 0.21.0. Installed on artpro WSL |
+| **Language Version** | 0.21.0 | >= 0.20 | ✅ | `pragma language_version >= 0.20;` |
+| **Compact-runtime** | 0.14.0 | 0.14.0 | ✅ | npm package |
+| **Compact-js** | 2.4.3 | 2.4.3 | ✅ | npm package |
+| **Ledger** | 7.0.3 | 7.0.3 | ✅ | `@midnight-ntwrk/ledger-v7` |
+| **Midnight.js** | 3.2.0 | 3.2.0 | ✅ | All `@midnight-ntwrk/midnight-js-*` packages |
+| **Wallet SDK Facade** | 2.0.0 | 2.0.0 | ✅ | Major bump from 1.0.0 in March 2026 |
+| **Wallet SDK HD** | 3.0.1 | 3.0.1 | ✅ | |
+| **Wallet SDK Shielded** | 2.0.0 | 2.0.0 | ✅ | Major bump from 1.0.0 |
+| **Wallet SDK Unshielded** | 2.0.0 | 2.0.0 | ✅ | Major bump from 1.0.0 |
+| **Wallet SDK Dust** | 2.0.0 | 2.0.0 | ✅ | Major bump from 1.0.0 |
+| **Proof Server** | 7.0.0 | 7.0.0 | ✅ | Docker: `midnightntwrk/proof-server:7.0.0` |
+| **Token** | tDUST | tDUST | ✅ | NOT tNight |
+| **Faucet** | — | — | ✅ | https://faucet.preprod.midnight.network/ |
 
 ---
 
-## 📝 **Our Configuration**
+## 🔢 Compiler → Language Version Mapping
 
-### **backend/midnight/package.json**
+| Compiler | Language | Notes |
+|----------|----------|-------|
+| 0.25.0 | 0.17.0 | Stable, older |
+| 0.26.0 | 0.18.0 | Had bugs, now superseded |
+| 0.28.0 | 0.20.0 | Major jump |
+| **0.29.0** | **0.21.0** | **← LATEST, use this** |
+
+---
+
+## 📦 npm Package Versions (Verified March 14, 2026)
+
+### Frontend DApp Dependencies (browser)
 ```json
 {
-  "dependencies": {
-    "@midnight-ntwrk/compact-runtime": "0.9.0",
-    "@midnight-ntwrk/ledger": "4.0.0"
-  }
+  "@midnight-ntwrk/compact-runtime": "0.14.0",
+  "@midnight-ntwrk/compact-js": "2.4.3",
+  "@midnight-ntwrk/ledger-v7": "7.0.3",
+  "@midnight-ntwrk/midnight-js-contracts": "3.2.0",
+  "@midnight-ntwrk/midnight-js-http-client-proof-provider": "3.2.0",
+  "@midnight-ntwrk/midnight-js-indexer-public-data-provider": "3.2.0",
+  "@midnight-ntwrk/midnight-js-level-private-state-provider": "3.2.0",
+  "@midnight-ntwrk/midnight-js-network-id": "3.2.0",
+  "@midnight-ntwrk/midnight-js-types": "3.2.0",
+  "@midnight-ntwrk/midnight-js-utils": "3.2.0",
+  "@midnight-ntwrk/wallet-sdk-facade": "2.0.0",
+  "@midnight-ntwrk/wallet-sdk-hd": "3.0.1",
+  "@midnight-ntwrk/wallet-sdk-shielded": "2.0.0",
+  "@midnight-ntwrk/wallet-sdk-unshielded-wallet": "2.0.0",
+  "@midnight-ntwrk/wallet-sdk-dust-wallet": "2.0.0",
+  "rxjs": "^7.8.0"
 }
 ```
 
-### **docker-compose.yml (Recommended)**
-```yaml
-services:
-  midnight-proof-server:
-    image: midnightnetwork/proof-server:3.0.7  # For Haswell CPUs
-    # OR
-    # image: midnightnetwork/proof-server:4.0.0  # For modern CPUs
-    ports:
-      - "6300:6300"
-    command: midnight-proof-server --network undeployed
+---
+
+## 🔗 Lace Wallet Browser Integration (Confirmed)
+
+**Source:** MCP TypeScript search — confirmed from working DApps:
+- `ErickRomeroDev/naval-battle-game_v2` (battle-naval.tsx)
+- `midnames/core` (api.ts)
+- `nel349/midnight-bank` (DeployedAccountProviderContext.tsx)
+
+### Correct Pattern
+```typescript
+// The Lace Midnight extension injects window.midnight.mnLace
+// NOT window.midnight directly!
+const mnLace = (window as any).midnight?.mnLace;
+
+// Check if Lace is available
+function isLaceAvailable(): boolean {
+  return typeof window !== 'undefined' && !!(window as any).midnight?.mnLace;
+}
+
+// Connect to wallet
+const compatibleConnectorAPIVersion = '1.x';
+const wallet = await mnLace.enable(compatibleConnectorAPIVersion);
+
+// Get wallet state (includes coinPublicKey and serviceUriConfig)
+const walletState = await wallet.state();
+const publicKey = walletState?.coinPublicKey;
+
+// The wallet also provides service URIs (indexer, proof server, node)
+// which can be used instead of hardcoding them
 ```
 
-### **Contracts**
-```compact
-pragma language_version >= 0.18.0;
+### Common Mistakes
+- ❌ `window.midnight.enable()` — wrong API path
+- ❌ `window.midnight.getPublicKey()` — doesn't exist
+- ✅ `window.midnight.mnLace.enable('1.x')` — correct
+- ✅ `wallet.state().coinPublicKey` — correct way to get public key
+
+---
+
+## 🌐 Preprod Network URLs
+
+```
+Indexer (GraphQL):  https://indexer.preprod.midnight.network/api/v3/graphql
+Indexer (WS):       wss://indexer.preprod.midnight.network/api/v3/graphql/ws
+RPC Node:           https://rpc.preprod.midnight.network
+Faucet:             https://faucet.preprod.midnight.network/
+Proof Server:       http://localhost:6300 (local Docker)
 ```
 
 ---
 
-## ✅ **Verification Commands**
+## 🚨 Known Issues
+
+### Proof Server CPU Compatibility (Still Relevant)
+```
+Proof Server 7.0.0 may require modern CPU instructions.
+- Intel Haswell (i7-4770) on Chuck: Too old for zkir generation
+- Needs Skylake (6th gen) or newer for full ZK proof generation
+- ARM Linux binary now available as of compiler 0.29.0
+```
+
+### Midnight MCP Hosted Compiler (March 2026)
+```
+Issue filed: https://github.com/Olanetsoft/midnight-mcp/issues/35
+- MCP's hosted compiler runs language 0.18.0 (compiler ~0.26.0)
+- Cannot validate contracts using pragma >= 0.20
+- Workaround: use local `compact compile +0.29.0` instead
+- MCP's static analysis also misses ledger declarations
+```
+
+---
+
+## 🔧 Compile Command
 
 ```bash
-# Check Compiler Version
-/home/js/utils_Midnight/bin/compactc --version
-# Expected: 0.26.0
+# Compile a contract (using installed compiler 0.29.0)
+compact compile +0.29.0 src/contracts/my-contract.compact src/managed/my-contract
 
-# Check CPU Compatibility
-cat /proc/cpuinfo | grep -E "avx512|avx2"
-# Haswell: shows avx2 (no avx512)
-# Modern: shows both
-
-# Test Proof Server 3.0.7
-docker run -d -p 6300:6300 \
-  midnightnetwork/proof-server:3.0.7 \
-  midnight-proof-server --network undeployed
-
-# Should run without crashes
-
-# Test Proof Server 4.0.0 (if modern CPU)
-docker run -d -p 6300:6300 \
-  midnightnetwork/proof-server:4.0.0 \
-  midnight-proof-server --network undeployed
-
-# Will crash on Haswell with exit 132
+# Update compiler (needs GitHub token)
+GITHUB_TOKEN=<token> compact update
 ```
 
 ---
 
-## 🔧 **Recommendations for Midnight Team**
-
-1. **Document CPU Requirements**
-   - Add AVX-512 requirement to docs
-   - List compatible CPU generations
-   - Provide migration guide
-
-2. **Consider Providing Both Builds**
-   - `proof-server:4.0.0` - Optimized (AVX-512)
-   - `proof-server:4.0.0-compat` - Compatible (AVX2)
-
-3. **Update Support Matrix**
-   - Add "CPU Requirements" column
-   - List minimum CPU generation
-
----
-
-## 📊 **Full Compatibility Status**
+## 📊 Full Compatibility Status (March 2026)
 
 ```
 ✅ VERIFIED WORKING:
-- Compact compiler 0.26.0
-- Language version 0.18.0
-- Compact-runtime 0.9.0
-- Ledger 4.0.0
-- Proof server 3.0.7 (Haswell compatible)
-- Testnet_02 network
+- Compact compiler 0.29.0 (language 0.21.0)
+- Pragma: >= 0.20 (open-ended, forward-compatible)
+- All midnight-js packages at 3.2.0
+- All wallet-sdk packages at 2.0.0
+- compact-runtime 0.14.0, compact-js 2.4.3, ledger-v7 7.0.3
+- Proof server 7.0.0 (Docker)
+- Preprod network
+- Lace wallet integration via window.midnight.mnLace
 
-⚠️ VERSION MISMATCH (Intentional):
-- Proof server 3.0.7 vs 4.0.0
-  Reason: CPU compatibility
-  Impact: None (both work with Testnet_02)
-
-⏳ NOT YET INSTALLED:
-- Midnight.js 2.1.0
-- Wallet SDK 5.0.0
-- Onchain-runtime 0.3.0
-  Reason: Not needed for current phase
+⚠️ KNOWN LIMITATIONS:
+- Chuck (Haswell i7-4770): Too old for zkir — use artpro or cloud
+- Midnight MCP hosted compiler: Stuck on 0.18.0 (issue #35 filed)
+- MCP static analysis: Misses ledger declarations
 ```
 
 ---
 
-## 🎯 **Recommendation**
-
-**Use proof-server:3.0.7 for development on older CPUs**
-- Fully compatible with all other components
-- Works perfectly on Testnet_02
-- Deploy with 4.0.0 to cloud later
-
-**All other components:** Use exact versions from matrix
-
----
-
-**Last Verified:** November 16, 2025  
-**System:** Ubuntu 24.04, Intel i7-4770 (Haswell)  
-**Network:** Testnet_02  
+**Last Verified:** March 14, 2026  
+**Systems:** ASUS Pro Art (artpro) WSL, Chuck (Ubuntu 24.04)  
+**Network:** Preprod  
 **Status:** ✅ All compatible and working
